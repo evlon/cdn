@@ -8,7 +8,7 @@
             var _cu = app.global.currentUser;
 
             if($("div.dashang").length == 0 && _cu.organization.name.indexOf('全') == -1){
-                $('ul.list').append('<li><div class="dashang" align="center"> <img  src="https://files-cdn.cnblogs.com/files/evlon/dashang.png.bmp"</img></div><div style="text-align:center;font-size:14px;color:blueviolet"><strong>请使用微信扫码打赏</strong></div></li>');
+                $('ul.list').append('<li><div class="dashang" align="center"> <img  src="https://cdn.jsdelivr.net/gh/evlon/cdn/img/dashang.png"</img></div><div style="text-align:center;font-size:14px;color:blueviolet"><strong>请使用微信扫码打赏</strong></div></li>');
             }
 
             if($('div.question-type-item[data-dynamic-key]').length == 0 || $('div.question-type-item[data-dynamic-key]').prop('data-show-answer') === true){

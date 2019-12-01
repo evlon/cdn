@@ -49,9 +49,9 @@
             var _cu = app.global.currentUser;
             var _hmt = _hmt || [];
             _hmt.push(['_setCustomVar', 1, 'uid', _cu.name, 1]);
-            _hmt.push(['_setCustomVar', 1, 'uname', _cu.fullName, 1]);
-            _hmt.push(['_setCustomVar', 1, 'ucompany', _cu.companyOrganization.name, 1]);
-            _hmt.push(['_setCustomVar', 1, 'udept', _cu.organization.name, 1]);
+            _hmt.push(['_setCustomVar', 2, 'uname', _cu.fullName, 1]);
+            _hmt.push(['_setCustomVar', 3, 'ucompany', _cu.companyOrganization.name, 1]);
+            _hmt.push(['_setCustomVar', 4, 'udept', _cu.organization.name, 1]);
 
             (function() {
               var hm = document.createElement("script");

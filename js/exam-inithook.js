@@ -47,6 +47,23 @@
             },1000);
 
             var _cu = app.global.currentUser;
+
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://v1.cnzz.com/z_stat.php?id=1278255530";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+                hm.onload = function(){
+                    var czc = window["_czc"]
+                    czc.push(["_setCustomVar", 'uid', _cu.name, 1]);
+                    czc.push(["_setCustomVar", 'uname', _cu.fullName, 1]);
+                    czc.push(["_setCustomVar", 'ucompany', _cu.companyOrganization.name, 1]);
+                    czc.push(["_setCustomVar", 'udept', _cu.organization.name, 1]);
+                }
+                
+
+            })();
+
             var _hmt = _hmt || [];
             _hmt.push(['_setCustomVar', 1, 'uid', _cu.name, 1]);
             _hmt.push(['_setCustomVar', 2, 'uname', _cu.fullName, 1]);

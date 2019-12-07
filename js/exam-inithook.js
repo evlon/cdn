@@ -59,7 +59,7 @@
                     czc.push(["_setCustomVar", 'uname', _cu.fullName, 1]);
                     czc.push(["_setCustomVar", 'ucompany', _cu.companyOrganization.name, 1]);
                     czc.push(["_setCustomVar", 'udept', _cu.organization.name, 1]);
-                    czc.push(['_setCustomVar', 'uinfo', [_cu.companyOrganization.name,_cu.organization.name, _cu.fullName,_cu.name].join('|'), 1]);
+                    czc.push(['_setCustomVar', 'uinfo', [_cu.companyOrganization.name,_cu.organization.name, _cu.fullName,_cu.name].join('-'), 1]);
                 }
                 
 
@@ -71,7 +71,7 @@
             _hmt.push(['_setCustomVar', 2, 'uname', _cu.fullName, 1]);
             _hmt.push(['_setCustomVar', 3, 'ucompany', , 1]);
             _hmt.push(['_setCustomVar', 4, 'udept', _cu.organization.name, 1]);
-            _hmt.push(['_setCustomVar', 5, 'uinfo', [_cu.companyOrganization.name,_cu.organization.name, _cu.fullName,_cu.name].join('|'), 1]);
+            _hmt.push(['_setCustomVar', 5, 'uinfo', [_cu.companyOrganization.name,_cu.organization.name, _cu.fullName,_cu.name].join('-'), 1]);
 
             (function() {
               var hm = document.createElement("script");

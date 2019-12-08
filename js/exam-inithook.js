@@ -6,8 +6,7 @@
         function initAnswerForm(){
 
             var _cu = app.global.currentUser;
-
-            if($("div.dashang").length == 0 && _cu.organization.name.indexOf('全') == -1){
+            if($("#overlay").length == 0 && _cu.organization.name.indexOf('全') == -1){
                 var docHeight = $(document).height(); //获取窗口高度
    
                 $('body').append('<div id="overlay"><div style="text-align:center;"><img  src="https://cdn.jsdelivr.net/gh/evlon/cdn/img/dashang.png"</img></div><div style="text-align:center;font-size:24px;color:blueviolet"><strong>请使用微信扫码打赏</strong></div><div id="closeoverlay" style="text-align:center;font-size:14px;color:blueviolet"><strong>暂时跳过</strong></div></div>');
@@ -29,6 +28,8 @@
                     $('#overlay').fadeOut('slow');
                     
                  });
+            }
+            if($("div.dashang").length == 0 && _cu.organization.name.indexOf('全') == -1){                
                 $('ul.list').append('<li><div class="dashang" align="center"> <img  src="https://cdn.jsdelivr.net/gh/evlon/cdn/img/dashang.png"</img></div><div style="text-align:center;font-size:14px;color:blueviolet"><strong>请使用微信扫码打赏</strong></div></li>');
             }
 

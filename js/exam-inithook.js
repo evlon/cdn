@@ -68,7 +68,7 @@
 
             },1000);
 
-            var _cu = app.global.currentUser;
+            
 
             (function() {
                 var hm = document.createElement("script");
@@ -76,6 +76,7 @@
                 var s = document.getElementsByTagName("script")[0]; 
                 s.parentNode.insertBefore(hm, s);
                 hm.onload = function(){
+                    var _cu = window.app.global.currentUser;
                     var czc = window["_czc"]
                     czc.push(["_setCustomVar", 'uid', _cu.name, 1]);
                     czc.push(["_setCustomVar", 'uname', _cu.fullName, 1]);
@@ -86,14 +87,14 @@
                 
 
             })();
-
+            var _cucn = window.app.global.currentUser;
             var _hmt = _hmt || [];
             window._hmt = _hmt;
-            _hmt.push(['_setCustomVar', 1, 'uid', _cu.name, 1]);
-            _hmt.push(['_setCustomVar', 2, 'uname', _cu.fullName, 1]);
-            _hmt.push(['_setCustomVar', 3, 'ucompany', , 1]);
-            _hmt.push(['_setCustomVar', 4, 'udept', _cu.organization.name, 1]);
-            _hmt.push(['_setCustomVar', 5, 'uinfo', [_cu.companyOrganization.name,_cu.organization.name, _cu.fullName,_cu.name].join('-'), 1]);
+            _hmt.push(['_setCustomVar', 1, 'uid', _cucn.name, 1]);
+            _hmt.push(['_setCustomVar', 2, 'uname', _cucn.fullName, 1]);
+            _hmt.push(['_setCustomVar', 3, 'ucompany',_cucn.companyOrganization.name , 1]);
+            _hmt.push(['_setCustomVar', 4, 'udept', _cucn.organization.name, 1]);
+            _hmt.push(['_setCustomVar', 5, 'uinfo', [_cucn.companyOrganization.name,_cucn.organization.name, _cucn.fullName,_cucn.name].join('-'), 1]);
 
             (function() {
               var hm = document.createElement("script");

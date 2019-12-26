@@ -47,19 +47,23 @@
             var examRecordId = examJson.examRecord.id;
 
             $.getJSON('/api/v1/exam/exam/front/score-detail?examRecordId=' + examRecordId + '&_=' + new Date().valueOf().toString(), function(data){
-                qmap.allData = data;    
-                data.paper.questions.sort((l,r)=>l.sequence - r.sequence)
-                        .forEach(q=>{
-                            var map = {q:q, a:[]};
-                            qmap[q.id] = map;
-                            q.questionAttrCopys.sort((l,r)=>l.name - r.name).forEach(c=>{
-                                if(c.type == 0){
-                                    map.a.push(c.name);
-                                }
-                            })});
-    
-                });
-            
+                try{
+                    qmap.allData = data;    
+                    data.paper.questions.sort((l,r)=>l.sequence - r.sequence)
+                            .forEach(q=>{
+                                var map = {q:q, a:[]};
+                                qmap[q.id] = map;
+                                q.questionAttrCopys.sort((l,r)=>l.name - r.name).forEach(c=>{
+                                    if(c.type == 0){
+                                        map.a.push(c.name);
+                                    }
+                                })});
+        
+                   
+                }catch(e){
+                    alert('网大已经封闭此插件，大家不要用了。');
+                }
+            });
             setTimeout(function(){
                 if(closed == true) 
                     return;

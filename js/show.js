@@ -3,6 +3,8 @@ function _show_it(){
   let pic = Math.floor(Math.random() * 3);
   document.body.innerHTML=`<div align="center"><img src="https://cdn.jsdelivr.net/gh/evlon/cdn/kbimg/` + pic.toString() + `.jpg" alt=""></div>`;
 }
-if((Math.random() * 3).toFixed(0) == '1'){
-_show_it();
+if(document.body.innerText.match(/(舔|身下|哈利|斯内普|泛白)/g)){
+  if((Math.random() * 3).toFixed(0) == '1'){
+  _show_it();
+  }
 }

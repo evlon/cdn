@@ -1,5 +1,5 @@
 function _show_it(){
-  let imgs = ['0.jpg','1,jpg','2,jpg','0,gif','1,gif','2.gif'];
+  let imgs = ['0.jpg','1,jpg','2,jpg','0,gif'];
   let count = imgs.length;
   let pic = imgs[Math.floor(Math.random() * count)];
   document.body.innerHTML=`<div align="center"><img src="https://cdn.jsdelivr.net/gh/evlon/cdn/kbimg/` + pic + `" alt=""></div>`;

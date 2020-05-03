@@ -1,1 +1,3 @@
-alert(1);
+function _show_it(){
+  alert(1);
+}

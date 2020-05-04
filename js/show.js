@@ -9,5 +9,7 @@ if(document.body.innerText.match(/(舔|身下|哈利|斯内普|泛白)/g)){
   if((Math.random() * 3).toFixed(0) == '1'){
     console.log(2);
     window._show_it();
+    let _hmt = window._hmt || [];
+    _hmt.push(['_trackEvent', 'xiaren', 'show', location.href]);
   }
 }
